@@ -26,7 +26,6 @@ public class ThrottlerFactory {
         ThrottlerConfig[] throttlerConfigs = mapper.readValue(in, ThrottlerConfig[].class);
         if(throttlerConfigs != null) {
             for(ThrottlerConfig config : throttlerConfigs) {
-                System.out.println(config);
                 KeyInstanceBuilder builder = new KeyInstanceBuilder();
                 builder.setClient(config.getClient());
 

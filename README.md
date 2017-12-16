@@ -57,4 +57,5 @@ With the default configuration application expect throttling.yml in your classpa
 - More stingen checks need to be added on the time related portions inorder to get better performance
 - In case of distributed needs , should use a distributed, central storage(like redis) instead of the default LocalStorage
 - Can be modified in order to use any other storage backend
+- Thread safety
 

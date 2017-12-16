@@ -17,9 +17,7 @@ public class LocalStorage implements ThrottlerStorage {
     private Cache<String,Long> cache = Cache2kBuilder
             .of(String.class,Long.class)
             .eternal(false)
-//            .name("LocalEternalCache")
             .permitNullValues(true)
-//            .sharpExpiry(true)
             .expireAfterWrite(32, TimeUnit.DAYS)
             .expiryPolicy(new ExpiryPolicy<String, Long>() {
                 @Override
