@@ -1,0 +1,39 @@
+- client: client1
+  limit:
+    sec: 2
+    min: 10
+    hour: 100
+    day: 1000
+    month: 2000
+#  specialization:
+#    - type: API
+#      limit:
+#        /status:
+#          min: 10
+#          day:  10000
+#    - type: METHOD
+#      limit:
+#        POST:
+#          hour: 3000
+#          month: 100000
+
+- client: client2
+  limit:
+    month: 10000
+  specialization:
+    - type: API
+      limit:
+        /status:
+          sec: 2
+          min: 15
+
+- client: client3
+  limit:
+    month: 10000
+  specialization:
+    - type: METHOD
+      limit:
+        POST:
+          sec: 2
+          min: 15
+
